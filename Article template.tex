@@ -1,0 +1,394 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[margin=1in]{geometry} % bigger margins
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage[round,sort,authoryear,numbers]{natbib}
+\usepackage[colorlinks=true,citecolor = red]{hyperref}
+\usepackage{times}
+\usepackage{epstopdf}
+\usepackage{mathptmx}
+\usepackage{indentfirst}
+\usepackage{cite}
+\setlength{\parindent}{2em}
+\title{Instability and transition in heated serpentine tubes of supercritical fluid}
+
+\author{Your names and group number}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Enter a short summary here. What topic do you want to investigate and why? What experiment did you perform? What were your main results and conclusion?
+\end{abstract}
+
+\section{Introduction}
+\label{sec:introduction}
+
+
+
+
+\todo{the development of vortices}
+
+\section{Experimental Apparatus and data reduction}
+\label{sec:experiment}
+The experimental system has been described in detail in our previous work [(Xu et al., 2015)]. The test section consists of one straight adiabatic inlet section of 50 mm long, one serpentine heated section of 88 mm long and one straight adiabatic outlet section of 50 mm long, as shown in fig.1. The serpentine section was carefully manufactured to obtain curvature diameter of 8.01 mm with stainless steel 1Cr18N9T tube whose inner diameter is 0.953 mm and outer diameter is 2.01 mm.  The serpentine section included 14 basic units of 90du bending angle. As shown in fig.2, to keep the test section thermally insulated from the environment, the test section was placed in a vacuum chamber with gauge pressure kept at -0.097 MPa. The heat loss test showed that the maximum heat loss decreased from 26.9\% to less than 8\% relative to the total heat transfer rate with the use of the vacuum chamber. The test section was heated directly by low-voltage direct current power source. The measurements of the CO$_2$ mass flow rate, inlet and outlet temperatures, inlet pressure the current and voltage are presented in (Xu et al., 2015).
+
+To obtain continuous temperature distribution, an infrared thermometer (Model FLIR X-A 300) was employed to detect the temperature of the outer wall of the test section with the outer wall painted black with the emissivity of 0.98. One piece of zinc sulfide glass was installed on the surface of the vacuum chamber to improve the light transmittance between the test section and the IR camera lens with the transmittance of the zinc sulfide glass measured as 0.90 as shown in Fig. 2. \todo{yinyong figure}
+Two micro T-type thermocouples were welded onto the outer tube surface to obtain the local outer wall temperatures on the location of x=0.5$\pi$R and x=5$\pi$R. The thermocouples can obtain temperature change with time for every 5 seconds. The differences between the two measurement methods were within $\pm0.15 ^{\circ}$C within the range of 0–100 $^{\circ}$C and within $\pm0.3$ within the range of 100–200 $^{\circ}$C. 
+The system was assumed to be at steady state when the temperature variations did not change with time and the inlet and outlet fluid temperatures were within $\pm0.2 ^{\circ}$C.\todo{Is this description right?}
+The inlet pressure and the mass flow rate change with $\pm0.2\%$.
+
+
+The local inner wall temperature $T_{w,i}(x)$ was derived from the measured outwall temperature $T_{w,o}(x)$ as:
+\begin{equation}
+T_{w,i}(x) = T_{w,o}(x)+\frac{q_v(x)}{16\lambda}[d_o^2-d_i^2]+\frac{q_v(x)}{8\lambda}d_o^2ln\frac{d_i}{d_o}
+\end{equation}
+
+where $q_v(x)$ was calculated as:
+\begin{equation}
+q_v(x)=\frac{I^2R(t)\Delta x-Q_{loss,\Delta x}}{[\pi(d_o^2-d_i^2)/4]\cdot\Delta x}
+\end{equation}
+
+Here $R(t)$ represents the elctrical resiatance of the test section, $Q_(loss,\Delta x)$ represents the heat losses.
+
+The local heat flux on the inner wall, $q_w(x)$)was calculated as:
+\begin{equation}
+q_w=\frac{I^2R(t)\Delta x-Q_{loss,\Delta x}}{\pi d_i\Delta x}
+\end{equation}
+
+The local bulk fluid temperature, $T_{f,b}(x)$, was obtained from the NIST software REFPROP 7.0 referenced from the local bulk fluid enthalpy, $h_{f,b}(x),$, which was calculated as:
+\begin{equation}
+h_{f,b}(x) = h_{f,b}(0)+\frac{q_w\pi d_ix}{G}
+\end{equation}
+\todo{simulation derivarition Gr}
+
+The local Reynolds number, Re$(x)$, along the flow direction, was calculated as:
+\begin{equation}\label{Re(x)}
+Re(x)=\frac{\rho ud_i}{\mu}=\frac{4G}{\pi d_i\mu_{f,b}(x)}
+\end{equation}
+\todo{De may be deacribed in introduction}
+\todo{explain duiying when -transient}
+
+\begin{equation}
+	\frac{\partial u_\phi}{\partial t} + (\bar{u}\cdot \nabla)u_\phi + \frac{u_ru_\phi}{r} + \frac{sin \phi}{\xi}u_\theta^2 
+\end{equation}
+
+\section{Experimental results and discussion}
+
+Using the micro thermocouples to measure the transient temperature change for every 5 seconds, we observed that the temperatures show increasing fluctuations of about 1$^{\circ}$C with increasing heat fluxes. Fig.\ref{tem-outwall} shows  time records of outwall temperature at location of $5\pi R$ for cases of 7.9 MPa inlet pressure, 0.12 kg/h mass flux and 25 kw/m$^2$ heat flux. Fig.\ref{$T_w$ and} shows the change of $T_w$ and maximum fluctuation differences at location of $5\pi R$ obtained for different heat fluxes. Fig.\ref{local outwall} shows distributions of local outwall temperature and bulk fluid temperatures with $x/d$ at an instant\todo{peak?} for various heat fluxes at inlet pressure of 7.9 MPa and mass fluxes of 0.03 kg/h and 0.12kg/h, respectively.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\textwidth]{fig/eps/tem-outwall-5pir-withtime-exp.eps}
+	\caption{tem-outwall-5pir-withtime-exp}\label{tem-outwall}
+\end{figure}\todo{zhi ding figure location}
+
+Acorrding to the experiment uncertainty analysis, the micro temperature changes within $\pm 0.2^{\circ}$C at steady state. Thus the maximum temperature difference for the micro thermocouple at different time is no more than 0.8$^{\circ}$C for steady state. Therefore, the periodic variation tendency in Fig.\ref{tem-outwall} indicates a unsteady flow and heat transfer pheomenon. In this experiment, the Database Acquisition Station employed can collect data every 5 seconds.
+\todo{conclusion: A more high speed Database Acquisition Station (DAS) }
+
+The profiles for maximum flucation difference in Fig.\ref{$T_w$ and} show that this quantity increases with increasing heat fluxes for the same mass flux and inlet pressure.  At relatively low heat fluxes, the temperature fluctuations are no more than 0.8 $^{\circ}$C, implying steady state. When the heat flux increases further, such as 6 kw/m$^2$ for 0.03 kg/h mass flux and 25 kw/m$^2$ for 0.1 kg/h mass flux, the fluctuation increaes to exceed 0.8$^{\circ}$C, implying a unsteady state. As discussed below in the simulation resulst, the fluctuations of outwall temperature is primarily associated with a non-turbulent low-frequency oscillation. For the mass flux of 0.12 kg/h, as the heat flux increased to 38 kw/m$^2$, the temperature fluctuation decreased to 0.742 $^{\circ}$C, which is associated with a high-frequency oscillation.
+\begin{figure}
+	\centering
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/tw-error-79MPa-0-03kgh.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/tw-error-79MPa-0-112kgh.eps}}
+	\subfigure{\includegraphics[width=0.5\textwidth]{fig/eps/tw-error-93MPa-0-112kgh.eps}} 
+	\caption{$T_w$ and Maximum fluctuation difference  at $x=5\pi R$ at different fluxes}\label{$T_w$ and}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/Tw-Tf-small-0-1kg.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/Tw-Tf-large-0-1kg-76MPa.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/Tw-Tf-small-0-034kg-76mpa.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/Tw-Tf-large-0-034kg-76mpa.eps}}
+	\caption{Local outwall temperature and bulk fluid temperatures at various heat fluxes, $P=$7.9 MPa, upward flow}\label{local outwall}
+\end{figure}
+
+All the temperature distributions along the flow drection at an instant corresponding to the peak of the fluctuations in Fig.\ref{local outwall} present a monotonically increasing trend with periodic peak points, similar to turbulent convection heat transfer in {xuruina}. Fpr cases with high heat flux, as the bulk fluid temperature increases over the pseudocritical temperature, the growth rate of inner wall temperature and the bulk fluid temperature increases rapidly, which can be atrributed to the specific heat $C_p$  decreasing rapidly after peaking at the pseudocritical temperature. Fig.\ref{Local heat} presents that the heat transfer coefficients increases for lower heat fluxes such as 1.6 kw/m$^2$ and 3.0 kw/m$^2$ for mass flux of 0.03 kg/h, and 5.4 kw/m$^2$ and 12.4 kw/m$^2$ for mass flux of 0.1 kg/h. For higher heat fluxes, the heat transfer coefficients first increase, then decrease and finally recover. The turning region from increse to decrease is just the region where the bulk fluid temperature in the vicinity of pseudocritical point.The supercritical pressure fluid properties changes abruptly near the pseudo-critical point, the fluid density, thermal conductivity, viscosity decrease, the specific heat increases firstly and then decreases sharply across the pseudo-critical point. The final convection heat transfer recover can be atrributed to multiple-vortex unsteady flow and the  flow transition to turbulence, discussed in the simulation results part. \todo{right?}
+
+Fig.\ref{Local Reynolds} shows that for higher heat fluxes, Reynolds number first increases, then decreases. According to Eq.\eqref{Re(x)}, the change of viscosity with bulk fluid temperature cause the variation of Reynols number. For mass fluxes of 0.12 kg/h, the Reynolds number increases from 700 to about 2200. And for heat fluxes of 0.03 kg/h, the Reynolds number increases from 200 to about 600.
+
+\begin{figure}
+	\centering
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/hsmall-0-03kg-76mpa.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/hlarge-0-03kg-76mpa.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/hsmall-0-1kg-76mpa.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/hlarge-0-1kg-76mpa.eps}}
+	\caption{Local heat transfer coefficients for various mass fluxes, upward flow}\label{Local heat}
+\end{figure}
+	
+\begin{figure}
+	\centering
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/Re-0-1kg-76mpa.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/Re-0-034kg-76mpa.eps}}
+	\caption{Local Reynolds number variations for various mass fluxes, upward flow}\label{Local Reynolds}
+\end{figure}
+
+\section{Simulation Model and Methods}
+
+\subsection{Computational domain, governing equations, and boundary conditions}
+The computational domain is the same as the experimental section, as shown in Fig.\ref{Computational domain}.  From the hydrodynamic point of view, the time-dependent continuity and Navier-Stokes equations for a variable-property fluid were solved in the Cartesian reference frame Oxyz. They can be written  in compact tensor notation as:
+\begin{equation}
+\frac{\partial \rho u_j}{\partial x_j}=0
+\end{equation}
+
+\begin{equation}
+\frac{\partial u_i}{\partial t}
+\end{equation}
+
+The transient coupled wall-to-fluid heat transfer in serpentine tubes was calculaetd by the ANSYS Fluent 14.5 software. The PISO scheme was used to solve the pressure-velocity coupling and second order upwind algorithm was adopted to discretize the momentum and energy terms. Least squares cell based scheme was employed to dicretize the gradient term and PRESTO! scheme was employed to discretize the  pressure term. And first order implicit algorithm was used for transient formulation. Mass conservation, energy conservation, velocity and temperature were monitored to check the solution convergence. The residual criteria were set 10$^-6$. Convergence were achieved when the residual curves and monitored quantities don't change with more interations, even if decreasing time step size, or increasing maximum iterations per time step.
+
+Velocity-inlet condition was specified at the inlet by a User-Defined Function to give a parabolically distributed velocity at a desired mass flow rate. The pipe outlet used the pressure-outlet boundary condition. The fluid was heated by the solid which had a specified constant volumetric heat source. No slip buodary condition was applied on the tube inner wall. Couple wall boundary condition was specified for the fluid-solid interface to fully consider the radial and circumferential heat conduction through the wall. During the whole tests, the pressure drop was no more than 0.1\% of the operating pressure, which has little effect on the flow and heat transfer of CO$_2$. Thus the pressure can be regard as constant. A User-Defined Function was used to determine the temperature-dependent fluid properties.
+
+\begin{figure}
+	\centering
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/serpentine-tube.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/grid.eps}}
+	\caption{Computational domain and grid}\label{Computational domain}
+\end{figure}
+
+\subsection{Grid independence}
+
+
+Ansys ICEM software was used to generate the mesh, as shown in Fig.\ref{Computational domain}.  In the grid, near-wall enhancement was adopted. The number of nodes in the near-wall region was set so that at least 13 nodes covered the boundary layer. To save time and computational resource, grid independence work was conducted with 6 bending elements of 90$^{\circ}$. The cross-section grid numeber is 2184 and 3684, and the axial element number for one bending element of 90$^{\circ}$ is 48, 64, and 80. The grid independence test in Fig.\ref{gridinde} shows that for the three sets of grid, the differences of inner wall temperature and bulk fluid temperature are within 1$\%$. Thus the cross section grid number is set as 2184, and the axial element number is set us 48, which can guarantee the computational accuracy. The final grid number for the whole computational domain is 1864008. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{fig/eps/gridinde78MPa-0-112kgh-33-6kwm2.eps}
+	\caption{grid independence test}\label{gridinde}
+\end{figure}
+\subsection{Validaiton to experimental results}
+Time step independence was conducted with 0.03 s and 0.05 s, and the two results obtained identical transient evolution. However, the experimental results obtained transient fluctuations of every 5 seconds limited to the low speed of present Data Acquisition system. Therefore, more refined experimental results will be presented in the next article with a high speed Data Acquisition system of every 0.01 s. To keep consistent with the experimental results, the simulation results of every 2 seconds were presented to compare with the experimental results of every 5 seconds. Since the simulation results of every 0.05 s will be in a mess compared to results of every 5 seconds. Fig.\ref{Model validation} shows the local inner wall temperature and bulk fluid temperature variations of simulation and experimental results both corresponding to the fluctuation peak. 
+
+\begin{figure}
+	\centering
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/tw-tf-validation-to-exp-article.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/Tw-t-validation-exp-sim-article.eps}}
+	\caption{Model validation to experimental results (a) local inner wall temperature and bulk fluid temperature (b) Outwall temperature fluctuation with time change}\label{Model validation}
+\end{figure}
+
+
+
+\section{Simulation results}
+\subsection{Mean flow results}
+
+For supercritical pressure fluid flow in serpentine tube, the flow is affected by variable physical properties, periodic-curvature centrifugal force and buoyancy force. Therefore, the periodic-curvature centrifugal force was first studied in q=0 cases for various Reynolds numbers. Then, the effect of variable physical properties was investigated with g=0 cases (forced convection). Finally, the influence of buoyancy force for two flow directions, that is, upward flow and downward flow, was studied.
+
+As the experimental results shows, for upward flows, with increase of heat fluxes, the flow tends to become unsteady. Flow instabilities in constant-curvature pipes have aroused much attention in references, including cite {K.R.Sreenivasan1983}, cite {Mees1996instability} \cite{Travellingwaveinstabilities} and cite{Piazza2011transition}. Flow instabilities of $\delta=0.2,0.3,0.4,0.5$ in a serpentine tube with periodic-curvature has been mentioned in cite{Ciofalo2017transition}. To understand the effect of buoyancy, we first present the base case results of $q=0$ of this case for $\delta=0.119$ in Fig.\ref{countoursq=0}; that is, the root mean square deviation from the mean velocity at each point in the pipe section of $y=0$. With increase of Reynolds number form 1000 to 2000 (De=344 ~688), the velocity began to oscillate further away from the exit. With the flow developes along the serpentine tube, the periodically changed curvature makes the flow become unsteady near the exit.
+
+\begin{figure}
+	\begin{minipage}{0.24\linewidth}
+		\centerline{\includegraphics[width=3.3cm]{fig/eps/urmsnorm-Re=1000.eps}}
+		\centerline{Re=1000}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.24\linewidth}
+		\centerline{\includegraphics[width=3.7cm]{fig/eps/urmsnorm-Re=1200.eps}}
+		\centerline{Re =1200}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.24\linewidth}
+		\centerline{\includegraphics[width=3.2cm]{fig/eps/urmsnorm-Re=2000.eps}}
+		\centerline{Re=2000}
+	\end{minipage}
+	\caption{Countours of the rms of the velocity for $q=0$}\label{countoursq=0}
+\end{figure}
+
+To study the effect of buoyancy effect and the flow direction, cases of $q=12.4, 27, 36 kw/m^2$ at $G$=0.119 kg/h, 	$P$ =7.8 Mpa were summarized, including upward, downward and g=0 flow. Fig.\ref{Time record} reports the behaviour of the streamwise velocity $u_\theta$ normalized by the bulk velocity at the monitoring point "P" and the power spectrum at $q=27 kw/m^2$. For upward flow, the power spectrum distribute mainly within the range of 0~2 Hz with a dominant frequency of 1.91 Hz. This low frequency oscillation is similar to the experimental observations of cite{Webster1993experimental}, indicating the flow is laminar. For downward flow, the power spectrum distributes within a wider range of 0~15 Hz with a single dominant frequency of 1.93 Hz.
+
+\begin{figure} 
+	\begin{minipage}{0.24\linewidth}
+		\centerline{\includegraphics[width=3.3cm]{fig/eps/undim-x-velocity-p-t-25-up.eps}}
+		\centerline{upward}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.24\linewidth}
+		\centerline{\includegraphics[width=3.7cm]{fig/eps/PSD-X-VELOCITY-P-25-up.eps}}
+		\centerline{upward}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.24\linewidth}
+		\centerline{\includegraphics[width=3.2cm]{fig/eps/Undimxvelocity-time-p-25-dw-arti.eps}}
+		\centerline{downward}
+	\end{minipage}
+	\hfill
+\begin{minipage}{0.24\linewidth}
+	\centerline{\includegraphics[width=3.2cm]{fig/eps/PSD-x-velocity-p-25-dw-arti.eps}}
+	\centerline{downward}
+\end{minipage}
+	\caption{Time record and power spectrum of $u_\theta$ of the monitoring point "P" ($r=0.85a, \theta=\pi, s=0, x=5\pi R$) of $q_w=27 kw/m^2$, G=0.119 kg/h, P=7.8 MPa, upward flow, downward flow and g=0}\label{Time record}
+\end{figure}
+
+Fig.\ref{countour12} reports countours of the rms of the velocity normalized by the bulk velocity and temperature rms for various heat fluxes of 12.4 kw/m$^2, 27.3 kw/m^2, 33.6 kw/m^2$ at P=7.8 MPa, G=0.119 kg/h. \todo{Reynolds fig, buoyancy fig} As shown in Fig.reynolds, the Reynolds number increases from 700 to about 2000. Comparing cases g=0 to q=0, the magnitude of $u^{rms} and T^rms$ increases with increase of heat fluxes. For upward flow, the flow appears instability in advace compared to g=0 cases. For downward flow, 
+
+\begin{figure}
+	\begin{minipage}{0.3\linewidth}
+		\subfigure{\includegraphics[width=1.4cm]{fig/eps/12-g=0-urms.eps}}
+		\subfigure{\includegraphics[width=1.4cm]{fig/eps/12-g=0-Trms.eps}}
+		\centerline{g=0}
+	\end{minipage}
+	\hfill
+	%\hfill
+	\begin{minipage}{0.3\linewidth}
+		\subfigure{\includegraphics[width=1.6cm]{fig/eps/12-4-up-urms.eps}}
+		\subfigure{\includegraphics[width=1.6cm]{fig/eps/12-4-up-Trms.eps}}
+		\centerline{upward}
+	\end{minipage}
+	\hfill
+	%\hfill
+	\begin{minipage}{0.3\linewidth}
+		\subfigure{\includegraphics[width=1.3cm]{fig/eps/12-4-DW-urms.eps}}
+		\subfigure{\includegraphics[width=1.3cm]{fig/eps/12-4-dw-Trms.eps}}
+		\centerline{downward}
+	\end{minipage}
+	\caption{Countours of the rms of the velocity for $q=12.4 kw/m^2$}\label{countour12}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/27-urms-g=0.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/27-Trms-g=0.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/27-up-urms.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/27-up-Trms.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/27-dw-urms.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/27-dw-Trms.eps}}
+	\caption{Countours of the rms of the velocity for $q=0$ (a)Re=1000 (b)Re =1200 (c) Re=2000 }\label{countours27}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/36-urms-g=0.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/36-Trms-g=0.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/36-DW-urms.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/36-DW-Trms.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/36-UP-Urms.eps}}
+	\subfigure{\includegraphics[width=0.3\textwidth]{fig/eps/36-UP-Trms.eps}}	
+	\caption{Countours of the rms of the velocity for $q=0$ (a)Re=1000 (b)Re =1200 (c) Re=2000}
+	\label{countours360}
+\end{figure}
+
+\subsection{flow development}
+
+\begin{figure}
+	\centering
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/cells-theta-Dn=344,413,689-arti.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/cells-theta-12-4-up-dw-forced-arti.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/cell-theta-27-forced-up-dw-arti.eps}}
+	\subfigure{\includegraphics[width=0.45\textwidth]{fig/eps/cell-theta-33-6-UP-DW-forced-arti.eps}}	
+	\caption{Calculated flow development diagrams for various cases (a) $Dn$ = 344, 413 and 689, q=0, (b) $P_{in}$=7.85 MPa, $G$=0.119 kg/h, $q_w$=12.4 kw/m$^2$, up, down, forced convection, (c) $P_{in}$=7.85 MPa, $G$=0.119 kg/h, $q_w$=27 kw/m$^2$, up, down, forced convection, (d) $P_{in}$=7.85 MPa, G=0.119 kg/h, $q_w$=33.6 kw/m$^2$, up, down, forced convection}
+	\label{flowdev}
+\end{figure}
+
+\cite Mees et al.(1996) caculated the fow development for a curvature ratio of 15.1 and flow rates between $Dn=200$ and $Dn = 600$. They investigated the flow transitions between a 6-cell, 4-cell and 2-cell state both numerically and experimentally. At Dean numbers between 350 and 500, a 6-cell pattern develops in the first 100$^{\circ}$ of the curved duct, and immediately breaks down spatially into a 2-cell state, from which a  4-cell state develops. The spatial oscillations between a 2-cell and a 4-cell state was also observed in \cite Bara et al.(1992). For serpentine tubes, the flow develoment at every periodically reversed curved duct for streamwise position of every 180 $^{\circ}$ till 1260 $^{\circ}$ are summarized in Fig.\ref{flowdev} for various cases, including $q=0$ cases, various heat fluxes for identical inlet mass fluxes and pressures.
+
+
+
+
+\subsection{cross-section velocity and temperature countours}
+
+
+\subsection{Discussion of the flow instability}
+\subsubsection{Mechanism}
+
+\subsection{dual influence of mechanism}
+
+
+
+
+\begin{table}
+	\centering
+	\caption{pressure ratio}
+	\begin{tabular}{|crrrr|}
+		\hline
+		$M _1$& $M _2$ & $p _2 / p _1$ & $\rho _2 / \rho _1$ & $T _2 / T _1$ \\
+		\hline
+		1.20 & 0.84217 & 1.5133 & 1.3146 & 1.1280 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item first
+	\item second
+\end{enumerate}
+
+\subsection{Classical regime}
+Calculate the sheet electron density $n_{s}$ and electron mobility $\mu$ from the data in the low-field regime, and refer to the theory in section. Explain how you retrieved the values from the data (did you use a linear fit?).
+Round values off to 1 or 2 significant digits: 8.1643 ~= 8.2. Also, 5e-6 is easier to read than 0.000005.
+
+!OBS: This part is optional (only if you have time left).
+Calculate the uncertainty as follows: \newline $u(f(x, y, z)) = \sqrt{(\frac{\delta f}{\delta{x}} u(x))^{2} + (\frac{\delta f}{\delta{y}} u(y))^{2} + (\frac{\delta f}{\delta{z}} u(z))^{2}}$, where $f$ is the calculated value ($n_{s}$ or $\mu$), $x, y, z$ are the variables taken from the measurement and $u(x)$ is the uncertainty in x (and so on).
+
+\subsection{Quantum regime}
+Calculate $n_{s}$ for the high-field regime.
+Show a graph of the longitudinal conductivity ($\rho_{xx}$) and Hall conductivity($\rho_{xy}$) \textbf{in units of the resistance quantum} ($\frac{h}{e^{2}}$), depicting the integer filling factors for each plateau.
+Show a graph of the plateau number versus its corresponding value of $1/B$. From this you can determine the slope, which you use to calculate the electron density.
+Again, calculate the uncertainty for your obtained values.
+
+\section{Discussion 1/2-1 page}
+Discuss your results. Compare the two values of $n_{s}$ that you've found in the previous section. Compare your results with literature and comment on the difference. If you didn't know the value of the resistance quantum, would you be able to deduce it from your measurements? If yes/no, why?
+
+\newpage
+\section{Some LaTeX tips}
+\label{sec:latex}
+\subsection{How to Include Figures}
+
+First you have to upload the image file (JPEG, PNG or PDF) from your computer to writeLaTeX using the upload link the project menu. Then use the includegraphics command to include it in your document. Use the figure environment and the caption command to add a number and a caption to your figure. See the code for Figure \ref{fig:frog} in this section for an example.
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.3\textwidth]{frog.jpg}
+%\caption{\label{fig:frog}This frog was uploaded to writeLaTeX via the project menu.}
+%\end{figure}
+
+\subsection{How to Make Tables}
+
+Use the table and tabular commands for basic tables --- see Table~, for example.
+
+\begin{table}
+\centering
+\begin{tabular}{l|r}
+Item & Quantity \\\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\caption{\label{tab:widgets}An example table.}
+\end{table}
+
+\subsection{How to Write Mathematics}
+\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+
+\begin{equation}
+S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+      = \frac{1}{n}\sum_{i}^{n} X_i
+\label{eq:sn}
+\end{equation}
+
+denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+
+The equation \ref{eq:sn} is very nice.
+
+\subsection{How to Make Sections and Subsections}
+
+Use section and subsection commands to organize your document. \LaTeX{} handles all the formatting and numbering automatically. Use ref and label commands for cross-references.
+
+
+\subsection{How to Make Lists}
+
+\bibliography{reference}{}
+\bibliographystyle{plain}
+
+%\bibliographystyle{plain}
+%\bibitem{nano3}
+%\bibliography{reference}
+
+
+\bibliographystyle{plainnat}
+\end{document}
